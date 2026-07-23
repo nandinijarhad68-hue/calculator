@@ -1,0 +1,78 @@
+
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <main class="app-container">
+        <!-- Main Calculator Card -->
+        <div class="calculator-card">
+            <!-- Header Controls (Theme switch & History toggle) -->
+            <header class="calc-header">
+                <div class="brand">
+                    <i class="fa-solid fa-calculator calc-icon"></i>
+                    <span>CALC</span>
+                </div>
+                <div class="header-actions">
+                    <button id="soundToggleBtn" class="icon-btn" title="Mute/Unmute Sounds" aria-label="Mute/Unmute Sounds">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <div class="theme-switch-wrapper" title="Toggle Light/Dark Theme">
+                        <input type="checkbox" id="themeCheckbox" class="theme-checkbox">
+                        <label for="themeCheckbox" class="theme-switch-label">
+                            <i class="fa-solid fa-sun icon-sun"></i>
+                            <i class="fa-solid fa-moon icon-moon"></i>
+                            <span class="theme-switch-ball"></span>
+                        </label>
+                    </div>
+                    <button id="historyToggleBtn" class="icon-btn"
+					title="Calculation History" aria-label="Calculation History">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span id="historyBadge" class="badge">0</span>
+                    </button>
+                </div>
+            </header>
+            <!-- Theme dots strip for quick presets -->
+            <div class="theme-dots-container">
+                <span class="theme-dot dot-dark active" data-theme="dark" title="Midnight Nebula"></span>
+                <span class="theme-dot dot-light" data-theme="light" title="Frosted Aurora"></span>
+                <span class="theme-dot dot-cyber" data-theme="cyber" title="Cyber Neon"></span>
+                <span class="theme-dot dot-rose" data-theme="rose" title="Sakura Blossom"></span>
+            </div>
+            <!-- Display Area -->
+            <section class="calc-display-wrapper">
+                <div class="calc-expression" id="expressionDisplay" aria-live="polite"></div>
+                <div class="calc-main-input" id="mainDisplay" aria-live="polite">0</div>
+            </section>
+            <!-- Keypad Grid -->
+            <section class="calc-keypad">
+                <!-- Row 1 -->
+                <button class="key action-key clear-btn" data-action="clear" id="btn-clear" title="Clear (Esc)">C</button>
+				                <button class="key operator-key" data-operator="-" id="btn-subtract">−</button>
+                <!-- Row 4 -->
+                <button class="key number-key" data-number="1" id="btn-1">1</button>
+                <button class="key number-key" data-number="2" id="btn-2">2</button>
+                <button class="key number-key" data-number="3" id="btn-3">3</button>
+                <button class="key operator-key" data-operator="+" id="btn-add">+</button>
+                <!-- Row 5 -->
+                <button class="key action-key" data-action="toggle-sign" id="btn-toggle-sign">±</button>
+                <button class="key number-key" data-number="0" id="btn-0">0</button>
+                <button class="key number-key" data-number="." id="btn-decimal">.</button>
+                <button class="key equals-key" data-action="calculate" id="btn-equals">=</button>
+            </section>
+        </div>
+        <!-- Sliding History Panel -->
+        <aside class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3><i class="fa-solid fa-history"></i> History</h3>
+                <div class="history-actions">
+                    <button id="clearHistoryBtn" class="text-btn" title="Clear History">Clear</button>
+                    <button id="closeHistoryBtn" class="icon-btn" title="Close Panel"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="empty-history">No history yet</div>
+            </div>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
